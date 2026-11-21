@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest-50: #eef6ef;
+  --color-forest-100: #d5e8d8;
+  --color-forest-200: #b2d4b8;
+  --color-forest-600: #2b593a;
+  --color-forest-700: #1a4528;
+  --color-forest-800: #14361f;
+  --color-forest-900: #0d2615;
+
+  --color-leaf-300: #a3d977;
+  --color-leaf-400: #8ccb55;
+  --color-leaf-500: #74c043;
+  --color-leaf-600: #5da833;
+  --color-leaf-700: #417d22;
+
+  --color-cream-50: #fdfcf8;
+  --color-cream-100: #f7f4eb;
+  --color-cream-200: #ede7d6;
+
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    background-color: var(--color-cream-50);
+    color: var(--color-forest-800);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background-color: var(--color-leaf-500);
+    color: var(--color-forest-900);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.leaf-mesh {
+  background-image:
+    radial-gradient(circle at 14% 18%, rgba(116, 192, 67, 0.16) 0, transparent 42%),
+    radial-gradient(circle at 86% 82%, rgba(116, 192, 67, 0.12) 0, transparent 46%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

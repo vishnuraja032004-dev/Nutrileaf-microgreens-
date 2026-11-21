@@ -1,0 +1,6 @@
+{
+  "name": "Nutrileaf Microgreens",
+  "description": "Fresh microgreens grown, packed, and sold directly from Dindigul, Tamil Nadu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
